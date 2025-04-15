@@ -1,34 +1,32 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    private Vector2 movementInput;
+    public float movePlayerSpeed;
     
-    public float projectileSpeed = 8f;
-    public GameObject projectilePrefab;
-    public Transform projectileSpawnPoint;
+    public GameObject projectile;
 
-    public void OnMove(InputAction.CallbackContext context)
+    void Awake()
     {
-        Debug.Log("Move Input: " + context.ReadValue<Vector2>());
-        movementInput = context.ReadValue<Vector2>();
-    }
-
-    public void Shoot(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
-            Debug.Log("Bang");
-        }
+        movePlayerSpeed = 5f;
     }
 
     void Update()
     {
-        Vector2 movement = new Vector2(movementInput.x, 0);
-        transform.Translate(movement * moveSpeed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(Vector2.left * (movePlayerSpeed * Time.deltaTime));
+        }
+
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(Vector2.right * (movePlayerSpeed * Time.deltaTime));
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject newProjectile = Instantiate(projectile, transform.position + new Vector3 (0, 0.3f, 0), Quaternion.identity);
+            Destroy(newProjectile, 2.5f);
+        }
 
     }
 }
