@@ -1,32 +1,36 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movePlayerSpeed;
+    [SerializeField] float playerMoveSpeed;
+    [SerializeField] Vector2 movementInput;
     
-    public GameObject projectile;
+    [SerializeField] GameObject projectile;
 
     void Awake()
     {
-        movePlayerSpeed = 5f;
+        playerMoveSpeed = 5f;
     }
 
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        Debug.Log("Movement input: " + context.ReadValue<Vector2>());
+        movementInput = context.ReadValue<Vector2>();
+    }
+    
+    public void onFire(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GameObject newProjactile = Instantiate(projectile, transform.position + new Vector3(0, 0.6f, 0), Quaternion.identity);
+            Destroy(newProjactile, 2f);
+        }
+    }
+    
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector2.left * (movePlayerSpeed * Time.deltaTime));
-        }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector2.right * (movePlayerSpeed * Time.deltaTime));
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject newProjectile = Instantiate(projectile, transform.position + new Vector3 (0, 0.3f, 0), Quaternion.identity);
-            Destroy(newProjectile, 2.5f);
-        }
-
+        Vector2 direction = new Vector2(movementInput.x, movementInput.y);
+        transform.Translate(direction * (playerMoveSpeed * Time.deltaTime));
     }
 }
