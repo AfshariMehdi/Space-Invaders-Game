@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 672a350670c4b7b40be924bf6579b447
+guid: 4edb73e2bb1300449b2807ae0be96573
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6183740906822543913
-    second: ChatGPT Image Apr 16, 2025, 07_27_11 PM_0
+      213: -344607203950467615
+    second: HIGHEST-SCORE-4-20-2025_0
+  - first:
+      213: 5991748760428575650
+    second: HIGHEST-SCORE-4-20-2025_1
+  - first:
+      213: 5226285724500639137
+    second: HIGHEST-SCORE-4-20-2025_2
+  - first:
+      213: -3285840549587134522
+    second: HIGHEST-SCORE-4-20-2025_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Apr 16, 2025, 07_27_11 PM_0
+      name: HIGHEST-SCORE-4-20-2025_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 70
-        width: 940
-        height: 953
+        x: 45
+        y: 44
+        width: 935
+        height: 91
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92aa536879f01d550800000000000000
-      internalID: 6183740906822543913
+      spriteID: 1e5ed75e295b73bf0800000000000000
+      internalID: -344607203950467615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HIGHEST-SCORE-4-20-2025_1
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 44
+        width: 359
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab7bb080c7f62350800000000000000
+      internalID: 5991748760428575650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HIGHEST-SCORE-4-20-2025_2
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 83
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad3e872d2f778840800000000000000
+      internalID: 5226285724500639137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HIGHEST-SCORE-4-20-2025_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 44
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7d845ed695662d0800000000000000
+      internalID: -3285840549587134522
       vertices: []
       indices: 
       edges: []
@@ -125,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9b0b3a377ccdddf4496fa02fbef39793
+    spriteID: e0b71296558167444a91aaba1f522eca
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Apr 16, 2025, 07_27_11 PM_0: 6183740906822543913
+      HIGHEST-SCORE-4-20-2025_0: -344607203950467615
+      HIGHEST-SCORE-4-20-2025_1: 5991748760428575650
+      HIGHEST-SCORE-4-20-2025_2: 5226285724500639137
+      HIGHEST-SCORE-4-20-2025_3: -3285840549587134522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

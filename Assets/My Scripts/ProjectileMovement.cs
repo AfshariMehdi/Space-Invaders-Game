@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
@@ -10,7 +9,7 @@ public class ProjectileMovement : MonoBehaviour
         transform.Translate(Vector2.up * (projectileSpeed * Time.deltaTime));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(collision.gameObject);
         Destroy(gameObject);
