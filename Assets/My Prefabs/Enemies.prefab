@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -981995428322416977}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8caca447e50692449b2581fc94f37165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 2
+  enemyProjectile: {fileID: 1112396115652589867, guid: 45aea8780b98db14a8402d2aa1c89e6c, type: 3}
 --- !u!61 &-981995428322416977
 BoxCollider2D:
   m_ObjectHideFlags: 0

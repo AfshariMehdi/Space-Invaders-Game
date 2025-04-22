@@ -28,7 +28,7 @@ public class BarrierManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Projectile"))
+        if (other.gameObject.CompareTag("Projectile") || other.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage();
         }
