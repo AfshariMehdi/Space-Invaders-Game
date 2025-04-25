@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;   
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,17 +10,18 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] GameObject projectile;
     
-    private int health = 3;
-    private Image image;
-    [SerializeField] Sprite[] healthSprites ;
-    [SerializeField] GameObject lives;
+    private int lives = 3;
+    [SerializeField] private GameObject[] hearts;
     
-    private bool isDead = false;
+    public static bool isDead = false;
 
-    void Awake()
+    void Start()
     {
         playerMoveSpeed = 5f;
-        image = lives.GetComponent<Image>();  
+        if (SkinSelector.selectedSprite != null)
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = SkinSelector.selectedSprite;
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -39,32 +41,43 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        if (isDead)
+        {
+            SceneManager.LoadScene("LooseScene");
+        }
+
+        if (EnemiesMovement.isWon)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
+        
         Vector2 direction = new Vector2(movementInput.x, movementInput.y);
         transform.Translate(direction * (playerMoveSpeed * Time.deltaTime));
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        if (other.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage();
         }
     }
-    
-    void UpdateSprite()
-    {
-        if (health == 2) image.sprite = healthSprites[1];
-        else if (health == 1) image.sprite = healthSprites[2];
-    }
 
     void TakeDamage()
     {
-        if (health <= 0)
+        if (lives <= 0)
         {
-            Destroy(gameObject);
             isDead = true;
         }
-        health--;
-        UpdateSprite();
+        else
+        {
+            UpdateHearts();
+            lives--;
+        }
+    }
+
+    void UpdateHearts()
+    {
+        Destroy(hearts[lives - 1]);
     }
 }
