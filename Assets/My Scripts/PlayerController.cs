@@ -78,6 +78,8 @@ public class PlayerController : MonoBehaviour
 
     void TakeDamage()
     {
+        lives--;
+        
         if (lives <= 0)
         {
             isDead = true;
@@ -85,7 +87,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             UpdateHearts();
-            lives--;
         }
     }
 
