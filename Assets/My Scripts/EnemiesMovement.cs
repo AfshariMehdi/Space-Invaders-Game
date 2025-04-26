@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemiesMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    private int Count;
+    private float Count;
     
     private Vector3[] directions = { Vector3.right, Vector3.left };
     private int directionIndex;
@@ -43,7 +43,7 @@ public class EnemiesMovement : MonoBehaviour
             {
                 moveDown = false;
                 timerForMoveDown = 0;
-                Count++;
+                Count += 0.5f;
                 return;
             }
             transform.Translate(Vector3.down * (moveSpeed * Time.deltaTime));

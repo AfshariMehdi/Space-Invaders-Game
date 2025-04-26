@@ -9,12 +9,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector2 movementInput;
     
     [SerializeField] GameObject projectile;
+    public AudioClip fireSound;
+    private AudioSource audioSource;
     
     private int lives = 3;
     [SerializeField] private GameObject[] hearts;
+    [SerializeField] private GameObject explosion;
     
     public static bool isDead = false;
-
+    
     void Start()
     {
         playerMoveSpeed = 5f;
@@ -22,6 +25,8 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = SkinSelector.selectedSprite;
         }
+        
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -34,11 +39,15 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            GameObject newProjactile = Instantiate(projectile, transform.position + new Vector3(0, 0.6f, 0), Quaternion.identity);
+            GameObject newProjactile = Instantiate(projectile, transform.position 
+                + new Vector3(0, transform.localScale.y * 2.6f, 0) , Quaternion.identity);
             Destroy(newProjactile, 2f);
+
+            audioSource.time = 0.6f;
+            audioSource.PlayOneShot(fireSound);
         }
     }
-    
+
     void Update()
     {
         if (isDead)
@@ -50,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("WinScene");
         }
-        
+
         Vector2 direction = new Vector2(movementInput.x, movementInput.y);
         transform.Translate(direction * (playerMoveSpeed * Time.deltaTime));
     }
@@ -60,6 +69,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyProjectile"))
         {
             TakeDamage();
+            GameObject e = Instantiate(explosion, transform.position, Quaternion.identity);
+            e.transform.localScale = new Vector3(1f, 1f, -1f);
+            Destroy(e, 0.3f);
+            
         }
     }
 

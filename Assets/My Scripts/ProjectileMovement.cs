@@ -4,6 +4,8 @@ public class ProjectileMovement : MonoBehaviour
 {
     public float projectileSpeed;
     
+    [SerializeField] GameObject EnemyExplosion;
+    
     void Update()
     {
         transform.Translate(Vector2.up * (projectileSpeed * Time.deltaTime));
@@ -14,6 +16,8 @@ public class ProjectileMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
+            GameObject e = Instantiate(EnemyExplosion, transform.position, Quaternion.identity);
+            Destroy(e, 0.3f);
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Barrier"))
