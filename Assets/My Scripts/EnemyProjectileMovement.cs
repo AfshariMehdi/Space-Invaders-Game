@@ -7,12 +7,12 @@ public class EnemyProjectileMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.down * (moveSpeed * Time.deltaTime));
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 4f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")) return;
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Projectile")) return;
         Destroy(gameObject);
     }
 }

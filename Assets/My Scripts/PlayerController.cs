@@ -92,6 +92,6 @@ public class PlayerController : MonoBehaviour
 
     void UpdateHearts()
     {
-        Destroy(hearts[lives - 1]);
+        Destroy(hearts[lives]);
     }
 }

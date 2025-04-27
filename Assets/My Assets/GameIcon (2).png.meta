@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9a84b80c3e591a943af998742f41482b
+guid: de9491c88c1f4ac42bd191c1616b254c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1139361265421597844
-    second: BlueBorder_0
+      213: -8185609310255242804
+    second: GameIcon (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueBorder_0
+      name: GameIcon (2)_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 261
-        height: 149
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c63c4b737fc2030f0800000000000000
-      internalID: -1139361265421597844
+      spriteID: cc12b1893bfd66e80800000000000000
+      internalID: -8185609310255242804
       vertices: []
       indices: 
       edges: []
