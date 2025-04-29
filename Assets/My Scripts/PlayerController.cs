@@ -18,8 +18,12 @@ public class PlayerController : MonoBehaviour
     
     public static bool isDead = false;
     
+    public static bool isPaused;
+    private double puaseTime;
+    
     void Start()
     {
+        isPaused = false;
         playerMoveSpeed = 5f;
         if (SkinSelector.selectedSprite != null)
         {
@@ -31,7 +35,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("Movement input: " + context.ReadValue<Vector2>());
         movementInput = context.ReadValue<Vector2>();
     }
     
@@ -50,8 +53,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isPaused)
+        {
+            puaseTime += Time.deltaTime;
+            if (puaseTime >= 2f)
+            {
+                isPaused = false;
+                puaseTime = 0f;
+            }
+            return;
+        }
+        
         if (isDead)
         {
+            Debug.Log("Dead");
             SceneManager.LoadScene("LooseScene");
         }
 
@@ -78,15 +93,14 @@ public class PlayerController : MonoBehaviour
 
     void TakeDamage()
     {
+        isPaused = true;
         lives--;
-        
+
+        UpdateHearts();
+
         if (lives <= 0)
         {
             isDead = true;
-        }
-        else
-        {
-            UpdateHearts();
         }
     }
 

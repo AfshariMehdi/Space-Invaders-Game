@@ -3,8 +3,17 @@ guid: 228182eae279aec479ce62fff3856c19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2645710251511378463
-    second: ChatGPT Image Apr 22, 2025, 01_49_59 AM_0
+      213: 7189011305630408472
+    second: BarrierSprites1_0
+  - first:
+      213: 3621131706058829898
+    second: BarrierSprites1_1
+  - first:
+      213: -3696787567706026831
+    second: BarrierSprites1_2
+  - first:
+      213: 7195672000208798838
+    second: BarrierSprites1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,45 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Apr 22, 2025, 01_49_59 AM_0
+      name: BarrierSprites1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 314
-        height: 290
+        y: 1
+        width: 316
+        height: 286
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 06d482ee9b77f6841af40f7ca2a329e6
-      internalID: -1910546562
+      spriteID: 81f1e5681bf74c360800000000000000
+      internalID: 7189011305630408472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image Apr 22, 2025, 01_49_59 AM_1
+      name: BarrierSprites1_1
       rect:
         serializedVersion: 2
-        x: 392
-        y: 0
-        width: 290
-        height: 252
+        x: 391
+        y: 1
+        width: 288
+        height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0d03e23e1699fc24c9238a7efbd9b2b2
-      internalID: 1992805522
+      spriteID: a407a80e918d04230800000000000000
+      internalID: 3621131706058829898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierSprites1_2
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1
+        width: 80
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc4dc82b4f52bcc0800000000000000
+      internalID: -3696787567706026831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierSprites1_3
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 133
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6748ba45f892cd360800000000000000
+      internalID: 7195672000208798838
       vertices: []
       indices: 
       edges: []
@@ -147,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fcabebf4e27dd0b4fbab7133c4e4974a
+    spriteID: bed0bcad05855784996fec3822676bd6
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Apr 22, 2025, 01_49_59 AM_0: -1910546562
-      ChatGPT Image Apr 22, 2025, 01_49_59 AM_1: 1992805522
+      BarrierSprites1_0: 7189011305630408472
+      BarrierSprites1_1: 3621131706058829898
+      BarrierSprites1_2: -3696787567706026831
+      BarrierSprites1_3: 7195672000208798838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

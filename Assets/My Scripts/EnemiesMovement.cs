@@ -14,9 +14,8 @@ public class EnemiesMovement : MonoBehaviour
     [SerializeField] GameObject enemyProjectile;
     double timerForProjectile;
     
-    [SerializeField] GameObject finalBoss;
-    
     public static bool isWon;
+    
 
     void Awake()
     {
@@ -26,11 +25,12 @@ public class EnemiesMovement : MonoBehaviour
         timerForMoveDown = 0;
         timerForProjectile = 0;
         isWon = false;
-        
     }
 
     void Update()
     {
+        if (PlayerController.isPaused) return;
+        
         if (transform.childCount == 0)
         {
             isWon = true;
@@ -39,7 +39,7 @@ public class EnemiesMovement : MonoBehaviour
         if (moveDown)
         {
             timerForMoveDown += Time.deltaTime;
-            if (timerForMoveDown > 0.15)
+            if (timerForMoveDown > 0.3)
             {
                 moveDown = false;
                 timerForMoveDown = 0;
@@ -50,7 +50,7 @@ public class EnemiesMovement : MonoBehaviour
             return;
         }
         
-        transform.Translate(directions[directionIndex] * (moveSpeed * (int)(Count/3) * Time.deltaTime));
+        transform.Translate(directions[directionIndex] * (moveSpeed * (int)(Count/2) * Time.deltaTime));
 
         timerForProjectile += Time.deltaTime;
         if (timerForProjectile > 1)
@@ -63,21 +63,13 @@ public class EnemiesMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("EnemyProjectile")) return;
-        
+        if (collision.gameObject.CompareTag("Projectile") || collision.gameObject.CompareTag("EnemyProjectile")
+                                                          || collision.gameObject.CompareTag("Player")) return;
         
         if (collision.gameObject.CompareTag("Wall"))
         {
             directionIndex = (directionIndex + 1) % 2;
             moveDown = true;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Barrier"))
-        {
-            PlayerController.isDead = true;
         }
     }
 }

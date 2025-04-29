@@ -92,7 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   enemyProjectile: {fileID: 1112396115652589867, guid: 45aea8780b98db14a8402d2aa1c89e6c, type: 3}
-  finalBoss: {fileID: 0}
 --- !u!61 &-981995428322416977
 BoxCollider2D:
   m_ObjectHideFlags: 0

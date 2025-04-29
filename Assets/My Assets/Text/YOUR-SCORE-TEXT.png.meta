@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1c2403219d440fa4fa377b35fddb28eb
+guid: 696655aaa7899284f84ebc4767852e3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4747531389225637141
-    second: BarrierSprites2_0
+      213: -8436226177589417499
+    second: YOUR-SCORE-TEXT_0
   - first:
-      213: -8156005649920660307
-    second: BarrierSprites2_1
+      213: -3911080033571666566
+    second: YOUR-SCORE-TEXT_1
   - first:
-      213: 6231770726021432387
-    second: BarrierSprites2_2
+      213: 4083811539770529217
+    second: YOUR-SCORE-TEXT_2
   - first:
-      213: -8684497577370109084
-    second: BarrierSprites2_3
+      213: -1363045591345220884
+    second: YOUR-SCORE-TEXT_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BarrierSprites2_0
+      name: YOUR-SCORE-TEXT_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 272
-        height: 260
+        x: 45
+        y: 44
+        width: 934
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bea6031ea516d1eb0800000000000000
-      internalID: -4747531389225637141
+      spriteID: 5e96eef0df08cea80800000000000000
+      internalID: -8436226177589417499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierSprites2_1
+      name: YOUR-SCORE-TEXT_1
       rect:
         serializedVersion: 2
-        x: 307
-        y: 0
-        width: 289
-        height: 261
+        x: 443
+        y: 44
+        width: 449
+        height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dac6662e21c00de80800000000000000
-      internalID: -8156005649920660307
+      spriteID: a7586d66e6d09b9c0800000000000000
+      internalID: -3911080033571666566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierSprites2_2
+      name: YOUR-SCORE-TEXT_2
       rect:
         serializedVersion: 2
-        x: 643
-        y: 0
-        width: 300
-        height: 261
+        x: 930
+        y: 93
+        width: 49
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3448f2e3572bb7650800000000000000
-      internalID: 6231770726021432387
+      spriteID: 1c5d9ad55fc9ca830800000000000000
+      internalID: 4083811539770529217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierSprites2_3
+      name: YOUR-SCORE-TEXT_3
       rect:
         serializedVersion: 2
-        x: 992
-        y: 0
-        width: 288
-        height: 261
+        x: 930
+        y: 44
+        width: 49
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46b3d1047777a7780800000000000000
-      internalID: -8684497577370109084
+      spriteID: ce2b433a14d751de0800000000000000
+      internalID: -1363045591345220884
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 369b5b92425f4f34f8daa67b72677822
     internalID: 0
     vertices: []
     indices: 
@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      YOUR-SCORE-TEXT_0: -8436226177589417499
+      YOUR-SCORE-TEXT_1: -3911080033571666566
+      YOUR-SCORE-TEXT_2: 4083811539770529217
+      YOUR-SCORE-TEXT_3: -1363045591345220884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
